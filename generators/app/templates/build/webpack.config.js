@@ -67,7 +67,7 @@ var cssProd = ExtractTextPlugin.extract({
 });
 
 var cssConfig = __DEV__ ? cssDev : cssProd;
-const routeComponentRegex = /pages\/routes\/([^\/]+\/?[^\/]+\/?[^\/]+).(js|jsx)$/
+const routeComponentRegex = /pages\/routes\/([^\/]+\/?[^\/]+).(js|jsx)$/
 module.exports = {
     devtool: 'eval',
     entry: {

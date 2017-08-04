@@ -1,18 +1,18 @@
 
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
-var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const config = require('./webpack.config');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-var PORT = 8080;
+const PORT = 8080;
 
-var HOST = 'localhost';
+const HOST = 'localhost';
 
-var args = process.argv;
-var hot = args.indexOf('--hot') > -1;
+const args = process.argv;
+const hot = args.indexOf('--hot') > -1;
 
 // 本地环境静态资源路径
-var localPublicPath = 'http://' + HOST + ':' + PORT + '/';
+const localPublicPath = 'http://' + HOST + ':' + PORT + '/';
 
 config.output.publicPath = localPublicPath; 
 config.entry.app.unshift('webpack-dev-server/client?' + localPublicPath);

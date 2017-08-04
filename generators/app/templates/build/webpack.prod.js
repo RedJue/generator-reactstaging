@@ -1,18 +1,18 @@
 
-var webpack = require('webpack');
-var config = require('./webpack.config');
+const webpack = require('webpack');
+const config = require('./webpack.config');
 
 /*
 process模块用来与当前进程互动，可以通过全局变量process访问，不必使用require命令加载。它是一个EventEmitter对象的实例。
 */
-var args = process.argv; //process.argv：当前进程的命令行参数数组。
+const args = process.argv; //process.argv：当前进程的命令行参数数组。
 // /*
 // deploy 部署
 // */
 // // 测试环境静态资源 domain(域)
-// var testPublicPath = '';
+// const testPublicPath = '';
 // // 生产环境静态资源 domain(域)
-// var onlinePublicPath = '';
+// const onlinePublicPath = '';
 
 // if (online) {
 //   config.output.publicPath = onlinePublicPath; 
@@ -35,7 +35,7 @@ if (uglify) {
     })
   );
 }
-var compiler = webpack(config);
+const compiler = webpack(config);
 
 function callback(err, stats) {
   if (err) {
