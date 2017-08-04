@@ -4,7 +4,8 @@
   "description": "react+redux+webpack demo project",
   "main": "app.js",
   "scripts": {
-    "dev": "NODE_ENV=development node build/webpack.dev.js --hot",
+    "dev": "NODE_ENV=development node build/webpack.dev.js",
+    "hot": "NODE_ENV=development node build/webpack.dev.js --hot",
     "test": "npm run clean && NODE_ENV=production node build/webpack.prod.js",
     "prod": "npm run clean && NODE_ENV=production node build/webpack.prod.js --uglify",
     "clean": "rimraf ./dist/* "
