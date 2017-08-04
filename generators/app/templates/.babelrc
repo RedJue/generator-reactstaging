@@ -1,0 +1,8 @@
+{
+  "presets": ["es2015", "react"],
+   "env": {
+   "development": {
+     "presets": ["react-hmre"] //开发环境才启用HMR和hmr的catch error
+   }
+   }
+}
